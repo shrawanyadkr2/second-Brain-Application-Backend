@@ -1,0 +1,47 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",        // Your source files are inside /src
+    "outDir": "./dist",        // Compiled JS will be placed in /dist
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "target": "ESNext",        // Use modern JavaScript output
+    "module": "NodeNext",      // Use Node.js ESM/CommonJS hybrid system
+    "moduleResolution": "NodeNext", // Resolves modules the Node.js way
+    "types": [],               // Add type packages here if needed (e.g., ["node"])
+    "esModuleInterop": true,   // ✅ Allows clean `import express from "express"`
+
+    // For nodejs:
+    // "lib": ["esnext"],       // Uncomment if you want full ESNext APIs
+    // "types": ["node"],       // Uncomment to include Node.js types
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,         // Generate .map files for debugging
+    "declaration": true,       // Generate .d.ts files
+    "declarationMap": true,    // Map declaration files for easier debugging
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,     // Treat possibly-undefined array items as undefined
+    "exactOptionalPropertyTypes": true,   // Optional properties must match exactly
+
+    // Style Options
+    // "noImplicitReturns": true,          
+    // "noImplicitOverride": true,          
+    // "noUnusedLocals": true,              
+    // "noUnusedParameters": true,         
+    // "noFallthroughCasesInSwitch": true, 
+    // "noPropertyAccessFromIndexSignature": true, 
+
+    // Recommended Options
+    "strict": true,             // Enable all strict type-checking
+    "jsx": "react-jsx",         // JSX support (if using React with TSX)
+    // "verbatimModuleSyntax": true,  // ❌ Removed (caused Express import error)
+    "isolatedModules": true,    // Treat each file as a module
+    "noUncheckedSideEffectImports": true, // Disallow importing unused modules
+    "moduleDetection": "force", // Force TS to treat files as modules
+    "skipLibCheck": true        // Skip type-checking node_modules
+  }
+}
