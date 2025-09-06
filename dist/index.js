@@ -56,6 +56,7 @@ app.post("/api/v1/content", middleware_1.userMiddleware, async (req, res) => {
     await db_1.ContentModel.create({
         link,
         type,
+        title: req.body.title,
         //@ts-ignore
         userId: req.userId,
         tags: []

@@ -1,19 +1,19 @@
-import mongoose, { model,Schema } from "mongoose";
-mongoose.connect("mongodb+srv://admin:ftc5w1ttoyEOAWDV@cluster0.uyjza.mongodb.net/second-brain");
+import mongoose, {model, Schema} from "mongoose";
 
-const userSchema= new Schema({
-    username : {type : String , unique:true },
-    password : String
+mongoose.connect("mongodb+srv://gsingh332211:WdlJp5rC1UbwXWFr@newcluster1.6ymvq.mongodb.net/brainly");
+
+const UserSchema = new Schema({
+    username: {type: String, unique: true},
+    password: {type: String},
 })
 
-export const UserModel =  model("user",userSchema) ;
+export const UserModel = model("User", UserSchema);
 
-const contentSchema = new Schema({
-    title : String ,
-    link : String,
-    tags : [{type:mongoose.Types.ObjectId, ref:'Tag'}],
-    userId : {type:mongoose.Types.ObjectId, ref:'user', required:true}
-
+const ContentSchema = new Schema({
+    title: String,
+    link: String,
+    tags: [{type: mongoose.Types.ObjectId, ref: "Tag"}],
+    userId: {type: mongoose.Types.ObjectId, ref: "User", required: true},
 })
 
-export const ContentModel = model("content", contentSchema);
+export const ContentModel = model("Content", ContentSchema);
