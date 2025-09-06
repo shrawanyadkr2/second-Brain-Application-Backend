@@ -1,3 +1,5 @@
+
+
 import express from "express";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
@@ -76,4 +78,11 @@ app.delete("/api/v1/content", userMiddleware, async (req, res) => {
     });
     res.json({message: "Content deleted"});
 });
+
+
+
+app.post("/api/v1/brain/share", (req, res) => {});
+
+app.get("/api/v1/brain/:shareLink", (req, res) => {});
+
 app.listen(3000);
