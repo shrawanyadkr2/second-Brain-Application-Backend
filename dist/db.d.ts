@@ -26,6 +26,81 @@ export declare const UserModel: mongoose.Model<{
 } & {
     __v: number;
 }>>;
+export declare const LinkModel: mongoose.Model<{
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+}, {}, {}, {}, mongoose.Document<unknown, {}, {
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+}, {}, mongoose.DefaultSchemaOptions> & {
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+}>, {}, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & mongoose.FlatRecord<{
+    userId: {
+        prototype?: mongoose.Types.ObjectId | null;
+        cacheHexString?: unknown;
+        generate?: {} | null;
+        createFromTime?: {} | null;
+        createFromHexString?: {} | null;
+        createFromBase64?: {} | null;
+        isValid?: {} | null;
+    };
+    hash?: string | null;
+}> & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}>>;
 export declare const ContentModel: mongoose.Model<{
     tags: mongoose.Types.DocumentArray<{
         prototype?: unknown;
@@ -52,6 +127,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: any;
         isValid?: any;
     }>;
+    type?: unknown;
     link?: unknown;
     title?: unknown;
     userId?: {
@@ -89,6 +165,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: any;
         isValid?: any;
     }>;
+    type?: unknown;
     link?: unknown;
     title?: unknown;
     userId?: {
@@ -126,6 +203,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: any;
         isValid?: any;
     }>;
+    type?: unknown;
     link?: unknown;
     title?: unknown;
     userId?: {
@@ -160,6 +238,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: {} | null;
         isValid?: {} | null;
     };
+    type?: string | null;
     link?: string | null;
     title?: string | null;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
@@ -181,6 +260,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: {} | null;
         isValid?: {} | null;
     };
+    type?: string | null;
     link?: string | null;
     title?: string | null;
 }>, {}, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & mongoose.FlatRecord<{
@@ -202,6 +282,7 @@ export declare const ContentModel: mongoose.Model<{
         createFromBase64?: {} | null;
         isValid?: {} | null;
     };
+    type?: string | null;
     link?: string | null;
     title?: string | null;
 }> & {
